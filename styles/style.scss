@@ -3,7 +3,7 @@
 @import "reset";
 @import "variables";
 @import "header";
-// @import "footer";
+@import "footer";
 
 /* ------------------------ */
 
@@ -64,8 +64,8 @@ body {
     text-align: center;
 }
 
-
 /* ------------------------ */
+
 .main__container {
     display: flex;
     flex-direction: column-reverse;
@@ -143,7 +143,7 @@ body {
 /* ------------------------ */
 
 .projects {
-    padding: 50px 0 94px 0;
+    padding: 50px 0 54px 0;
 }
 
 .projects__container {}
@@ -210,11 +210,12 @@ body {
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
     cursor: pointer;
-}
-
-.items-projects__button:not(:last-child) {
     margin-bottom: 42px;
 }
+
+// .items-projects__button:not(:last-child) {
+//     margin-bottom: 42px;
+// }
 
 .items-projects__button span {
     height: 24px;
@@ -249,7 +250,7 @@ body {
     border-radius: 36px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1.5rem;
 }
 
 .form__item {}
@@ -262,12 +263,13 @@ body {
 }
 
 .form__input {
+    font-family: 'Inter', sans-serif;
     border-radius: 1rem;
     background: $light-purple;
     width: 100%;
     height: 3.6875rem;
     padding: 0 1.5rem;
-    color: $dark-grayish;
+    color: $black;
 }
 
 textarea.form__input {
@@ -280,8 +282,22 @@ textarea.form__input {
     margin-bottom: 1.5rem;
 }
 
+.form__input::placeholder {
+    color: $dark-grayish;
+    transition: opacity 0.3s ease 0s;
+}
+
+.form__input:focus-visible {
+    outline: none;
+}
+
+.form__input:focus::placeholder {
+    opacity: 0;
+}
+
 .form__button {
-    margin-top: 45px;
+    margin-top: 21px;
+    width: 100%;
     background-color: $lime-green;
     transition: all 0.3s ease;
 }
@@ -295,7 +311,6 @@ textarea.form__input {
     display: inline-block;
     background: url(/assets/icons/send_icon.svg) right no-repeat;
 }
-
 
 /* ------------------------ */
 
