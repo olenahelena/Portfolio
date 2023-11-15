@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Inter:wght@400;600&display=swap");
+/* reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 20rem;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  line-height: inherit;
+}
+
+/* Primary colors */
+/* Neutral colors */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.1);
+  background: hsl(206, 20%, 93%);
+  z-index: 50;
+  box-shadow: 0px 3px 8px 0px rgba(156, 156, 156, 0.2);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.header__logo img {
+  width: 5.5625rem;
+  height: 2.5rem;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 3px;
+  align-items: center;
+}
+
+.menu__link {
+  color: hsl(0, 0%, 0%);
+  transition: color 0.3s ease 0s;
+}
+
+.menu__link:hover {
+  color: hsl(245, 100%, 81%);
+}
+
+/* ------------------------ */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  background-color: hsl(206, 20%, 93%);
+  color: hsl(0, 0%, 0%);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 340px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+/* ------------------------ */
+.button {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0.625rem 2rem;
+  background-color: hsl(245, 100%, 81%);
+  border-radius: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button:active {
+  background-color: hsl(215, 18%, 79%);
+}
+
+.title {
+  font-family: "Catamaran", sans-serif;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ------------------------ */
+.main__container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3.5rem;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7.625rem;
+}
+
+.main__title {
+  font-family: "Catamaran", sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 3.375rem;
+}
+
+.button_dark {
+  background-color: hsl(215, 18%, 79%);
+  transition: background-color 0.3s ease;
+}
+
+.button_dark:hover {
+  background-color: hsl(245, 100%, 81%);
+}
+
+.main__buttons {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.main__cv-button span {
+  padding-right: 2.125rem;
+  display: inline-block;
+  background: url(/assets/icons/download.svg) right no-repeat;
+}
+
+.main__github-button span {
+  padding-right: 34px;
+  display: inline-block;
+  background: url(/assets/icons/mdi_github.svg) right no-repeat;
+}
+
+.main__image {
+  text-align: center;
+  padding-top: 72px;
+}
+
+/* ------------------------ */
+.about {
+  padding: 45px 0 52px 0;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__text {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------ */
+.projects {
+  padding: 50px 0 94px 0;
+}
+
+.works__title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.items-projects__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+.items-projects__image img {
+  border-radius: 16px;
+}
+
+.items-projects__image {
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.items-projects__image:hover {
+  transform: scale3d(1.1, 1.1, 1);
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px 0px rgba(141, 142, 255, 0.6);
+}
+
+.items-projects__text {
+  text-align: center;
+}
+
+.items-projects__title {
+  margin-bottom: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.items-projects__text p {
+  display: inline-block;
+  width: 100%;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.items-projects__button {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0.6875rem 1rem;
+  background-color: hsl(215, 18%, 79%);
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.items-projects__button:not(:last-child) {
+  margin-bottom: 42px;
+}
+
+.items-projects__button span {
+  height: 24px;
+  width: 24px;
+  padding-right: 34px;
+  background: url(/assets/icons/arrow_icon.svg) right no-repeat;
+}
+
+.items-projects__button:hover {
+  background-color: hsl(244, 100%, 89%);
+}
+
+/* ------------------------ */
+.contacts {
+  padding-bottom: 3rem;
+}
+
+.contacts__image {
+  display: none;
+}
+
+.form {
+  background: hsl(245, 100%, 81%);
+  padding: 57px 20px 41px;
+  border-radius: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.625rem;
+  font-weight: 700;
+}
+
+.form__input {
+  border-radius: 1rem;
+  background: hsl(245, 100%, 94%);
+  width: 100%;
+  height: 3.6875rem;
+  padding: 0 1.5rem;
+  color: hsl(0, 0%, 39%);
+}
+
+textarea.form__input {
+  height: 5rem;
+  resize: vertical;
+  padding: 1.5rem;
+}
+
+.form__input:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.form__button {
+  margin-top: 45px;
+  background-color: hsl(70, 86%, 63%);
+  transition: all 0.3s ease;
+}
+
+.form__button:hover {
+  background-color: hsla(70, 100%, 80%, 0.9);
+}
+
+.form__button span {
+  padding-right: 34px;
+  display: inline-block;
+  background: url(/assets/icons/send_icon.svg) right no-repeat;
+}
+
+/* ------------------------ */
+.error {
+  display: none;
+}
+
+/* ------------------------ *//*# sourceMappingURL=style.css.map */

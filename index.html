@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <a href="https://github.com/olenahelena"><img src="/assets/icons/logo.svg" alt="Main Logo"
+                            target="_blank"></a>
+                </div>
+
+                <div class="header__burger">
+                    <img src="/assets/icons/burger.svg" alt="Burger icon">
+                </div>
+
+                <nav class="header__menu error">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a data-goto=".main" href="#" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a data-goto=".about" href="#" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a data-goto=".projects" href="#" class="menu__link">Projects</a>
+                        </li>
+                        <li class="menu__item">
+                            <a data-goto=".contacts" href="#" class="menu__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="page">
+            <section class="page__main main">
+                <div class="main__container">
+                    <div class="main__content">
+                        <h1 class="main__title">Frontend Developer</h1>
+                        <div class="main__buttons">
+                            <a href="#" class="main__cv-button button"><span>Download CV</span></a>
+                            <a href="#" class="main__github-button button_dark button"><span>My Github</span></a>
+                        </div>
+                    </div>
+                    <div class="main__image">
+                        <picture>
+                            <source media="(min-width: 700px)" srcset="/assets/images/main_photo.png">
+                            <img src="/assets/images/main_photo-mobile.png" alt="Main Photo">
+                        </picture>
+                    </div>8c#z6h-cR46_JK3
+                </div>
+            </section>
+
+            <section class="page__about about">
+                <div class="about__container">
+                    <div class="about__content">
+                        <h2 class="about__title title">About me</h2>
+                        <div class="about__text">
+                            <p>Nice to meet you! <br> I am Olena Shevchenko, an aspiring frontend developer passionate
+                                about crafting elegant and user-friendly web experiences. <br> With a keen eye for
+                                design and a love for coding, I am
+                                dedicated to creating seamless digital interfaces that captivate users. I am driven by
+                                the ever-changing world of
+                                technology and am constantly learning
+                                and adapting to new challenges.<br> Let's collaborate and build something extraordinary
+                                together!</p>
+
+                        </div>
+                    </div>
+                    <div class="about__image">
+                        <picture>
+                            <source media="(min-width: 700px)" srcset="/assets/images/about_img.png">
+                            <img src="/assets/images/about_me-mobile.png" alt="About me">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="page__projects projects">
+                <div class="projects__container">
+                    <h2 class="projects__title title">Projects</h2>
+                    <div class="projects__items items-projects">
+                        <div class="items-projects__body">
+                            <a href="https://scintillating-medovik-3b04a2.netlify.app/" class="items-works__item"
+                                target="_blank">
+                                <div class="items-projects__image"><img src="/assets/projects/first_prjct.png"
+                                        alt="Work example"></div>
+                            </a>
+                            <div class="items-projects__text">
+                                <h3 class="items-projects__title">Awesome parallax effect on scroll</h3>
+                                <p>In my project, I've implemented a captivating parallax effect that not only showcases
+                                    my coding skills but also adds an
+                                    engaging experience for visitors.</p>
+                            </div>
+                            <a href="https://scintillating-medovik-3b04a2.netlify.app/" class="items-projects__button"
+                                target="_blank">Open a website<span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page__contacts contacts">
+                <div class="contacts__container">
+                    <h2 class="contacts__title title">Contact</h2>
+                    <div class="contacts__content">
+
+                        <div class="contacts__image">
+                            <img src="/assets/images/message_img.png" alt="Girl Image">
+                        </div>
+                    </div>
+                    <form action="" class="contacts__form form">
+                        <div class="form__item">
+                            <label for="i-1" class="form__label">Name</label>
+                            <input required id="i-1" type="text" placeholder="Name" class="form__input" name="name">
+                        </div>
+                        <div class="form__item">
+                            <label for="i-2" class="form__label">Your email</label>
+                            <input required id="i-2" type="text" placeholder="Email" class="form__input" name="email">
+                        </div>
+                        <div class="form__item">
+                            <label for="i-3" class="form__label">Your Message</label>
+                            <textarea name="" id="i-3" class="form__input" placeholder="Message"
+                                name="message"></textarea>
+                        </div>
+                        <div class="form__item">
+                            <button type="submit" class="form__button button"><span>Send Message</span></button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer"></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
