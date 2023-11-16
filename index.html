@@ -20,33 +20,30 @@
     <div class="wrapper">
         <header class="header">
             <div class="header__container">
-                <div class="header__logo">
-                    <a href="#"><img src="/assets/icons/logo.svg" alt="Main Logo" target="_blank"></a>
-                </div>
-
-                <div class="header__burger">
-                    <img src="/assets/icons/burger.svg" alt="Burger icon">
-                </div>
-
-                <nav class="header__menu error">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a data-goto=".main" href="#" class="menu__link">Home</a>
-                        </li>
-                        <li class="menu__item">
-                            <a data-goto=".about" href="#" class="menu__link">About</a>
-                        </li>
-                        <li class="menu__item">
-                            <a data-goto=".projects" href="#" class="menu__link">Projects</a>
-                        </li>
-                        <li class="menu__item">
-                            <a data-goto=".contacts" href="#" class="menu__link">Contact</a>
-                        </li>
-                    </ul>
+                <a href="#" class="header__logo"><img src="/assets/icons/logo.svg" alt="Main Logo"></a>
+                <nav class="header__menu menu">
+                    <div class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a data-goto=".main" href="#" class="menu__link">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a data-goto=".about" href="#" class="menu__link">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a data-goto=".projects" href="#" class="menu__link">Projects</a>
+                            </li>
+                            <li class="menu__item">
+                                <a data-goto=".contacts" href="#" class="menu__link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="menu__icon icon-menu" type="button">
+                        <span class="icon-menu__line"></span>
+                    </button>
                 </nav>
             </div>
         </header>
-
 
         <main class="page">
 
@@ -61,14 +58,16 @@
                         <div class="main__buttons">
                             <a href="#" class="main__cv-button button"><span>Download CV</span></a>
 
-                            <a href="#" data-glow class="button_animation" type="button">
+                            <a href="https://github.com/olenahelena" data-glow class="button_animation" type="button"
+                                target="_blank">
                                 <div class="button__text"><span>My Github</span></div>
                             </a>
                         </div>
                     </div>
                     <div class="main__image">
-                        <picture>
-                            <source media="(min-width: 700px)" srcset="/assets/images/main_photo.png">
+                        <picture class="responsive-picture">
+                            <source media="(min-width: 797.98px)" srcset="/assets/images/main_photo.png">
+                            <source media="(min-width: 479.98px)" srcset="/assets/images/main_photo-tablet2.png">
                             <img src="/assets/images/main_photo-mobile.png" alt="Main Photo">
                         </picture>
                     </div>
@@ -93,7 +92,7 @@
                     </div>
                     <div class="about__image">
                         <picture>
-                            <source media="(min-width: 700px)" srcset="/assets/images/about_img.png">
+                            <source media="(min-width: 797.98px)" srcset="/assets/images/about_img.png">
                             <img src="/assets/images/about_me-mobile.png" alt="About me">
                         </picture>
                     </div>

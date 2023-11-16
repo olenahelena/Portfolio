@@ -68,47 +68,171 @@ span {
 /* Neutral colors */
 .header {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
-  border-bottom: 1px solid rgba(238, 238, 238, 0.1);
-  background: hsl(206, 20%, 93%);
+  width: 100%;
   z-index: 50;
-  box-shadow: 0px 3px 8px 0px rgba(156, 156, 156, 0.2);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
+  background-color: hsl(206, 20%, 93%);
+  border-bottom: 1px solid hsl(215, 18%, 79%);
 }
 
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  gap: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 70px;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 5;
 }
 
 .header__logo img {
-  width: 5.5625rem;
-  height: 2.5rem;
+  width: 89px;
+  height: 40px;
 }
 
 .menu__list {
   display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
-  row-gap: 3px;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 36px;
 }
 
 .menu__link {
-  color: hsl(0, 0%, 0%);
-  transition: color 0.3s ease 0s;
+  font-size: 18px;
 }
 
 .menu__link:hover {
-  color: hsl(245, 100%, 81%);
+  text-decoration: underline;
 }
 
+.menu-open body {
+  overflow: hidden;
+}
+
+.menu__body {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(206, 20%, 93%);
+  padding: 100px 15px 20px 15px;
+  transition: left 0.3s;
+  overflow: auto;
+  z-index: 1;
+}
+
+.menu-open .menu__body {
+  left: 0;
+}
+
+.icon-menu {
+  display: block;
+  position: relative;
+  z-index: 5;
+  width: 30px;
+  height: 18px;
+}
+
+/* Burger menu */
+.icon-menu__line,
+.icon-menu::before,
+.icon-menu::after {
+  content: "";
+  position: absolute;
+  background-color: hsl(245, 100%, 81%);
+  width: 100%;
+  height: 0.125rem;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.icon-menu::before {
+  top: 0;
+}
+
+.icon-menu::after {
+  bottom: 0;
+}
+
+.icon-menu__line {
+  top: calc(50% - 0.0625rem);
+}
+
+.menu-open .icon-menu::before {
+  top: calc(50% - 0.0625rem);
+  transform: rotate(-45deg);
+}
+
+.menu-open .icon-menu::after {
+  bottom: calc(50% - 0.0625rem);
+  transform: rotate(45deg);
+}
+
+.menu-open .icon-menu__line {
+  left: 50%;
+  width: 0;
+}
+
+@media (min-width: 797.98px) {
+  .menu__link {
+    font-size: 20px;
+  }
+  .menu__list {
+    gap: 42px;
+  }
+}
+@media (min-width: 991.9808px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 90px;
+  }
+  .header::before {
+    height: 90px;
+  }
+  .header__logo img {
+    width: 132px;
+    height: 53px;
+  }
+  .menu__body {
+    position: relative;
+    z-index: 5;
+    left: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .menu__list {
+    flex-direction: row;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 5px;
+  }
+  .icon-menu {
+    display: none;
+  }
+}
 .footer {
   padding: 32px 0 30px 0;
   background-color: hsl(0, 0%, 85%);
@@ -199,8 +323,8 @@ body {
 
 [class*=__container] {
   max-width: 340px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
@@ -332,6 +456,11 @@ body {
   text-align: center;
   display: inline-block;
   background: url(/assets/icons/mdi_github.svg) right no-repeat;
+}
+
+.responsive-picture {
+  max-width: 100%;
+  height: auto;
 }
 
 .main__image {
@@ -521,4 +650,38 @@ textarea.form__input {
   display: none;
 }
 
-/* ------------------------ *//*# sourceMappingURL=style.css.map */
+/* ------------------------ */
+@media (min-width: 479.9808px) {
+  [class*=__container] {
+    max-width: 70%;
+  }
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7.625rem;
+  }
+}
+@media (min-width: 797.98px) {
+  [class*=__container] {
+    max-width: 80%;
+  }
+  /* ------------------------ */
+  .button__text {
+    padding: 20px 30px;
+  }
+  .main__title {
+    font-size: 3rem;
+    margin-bottom: 3.375rem;
+  }
+}
+@media (min-width: 991.9808px) {
+  [class*=__container] {
+    max-width: 90%;
+  }
+}
+@media (min-width: 1280px) {
+  [class*=__container] {
+    max-width: 1200px;
+  }
+}/*# sourceMappingURL=style.css.map */

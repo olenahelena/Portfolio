@@ -29,14 +29,13 @@ body {
 
 [class*="__container"] {
     max-width: 340px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0 auto;
 }
 
 /* ------------------------ */
 .button_animation {
-    // margin-top: 200px;
     position: relative;
     overflow: hidden;
     border: 1px solid rgb(255, 255, 255, 0.1);
@@ -61,12 +60,10 @@ body {
 }
 
 .button__text {
-    // padding: 20px 30px;
     padding: 14px 30px;
     font-family: 'Inter', sans-serif;
     color: $black;
     font-size: 1.125rem;
-    // text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
     text-align: center;
@@ -181,6 +178,11 @@ body {
 //     display: inline-block;
 //     background: url(/assets/icons/mdi_github.svg) right no-repeat;
 // }
+
+.responsive-picture {
+    max-width: 100%;
+    height: auto;
+}
 
 .main__image {
     text-align: center;
@@ -383,3 +385,45 @@ textarea.form__input {
 }
 
 /* ------------------------ */
+
+@media (min-width: 479.9808px) {
+    [class*="__container"] {
+        max-width: 70%;
+    }
+
+    .main__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 7.625rem;
+    }
+}
+
+@media (min-width: 797.98px) {
+    [class*="__container"] {
+        max-width: 80%;
+    }
+
+    /* ------------------------ */
+    .button__text {
+        padding: 20px 30px;
+    }
+
+    .main__title {
+        font-size: 3rem;
+        margin-bottom: 3.375rem;
+    }
+
+}
+
+@media (min-width: 991.9808px) {
+    [class*="__container"] {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: 1280px) {
+    [class*="__container"] {
+        max-width: 1200px;
+    }
+}
