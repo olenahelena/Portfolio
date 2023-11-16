@@ -205,20 +205,68 @@ body {
 }
 
 /* ------------------------ */
+.button_animation {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background: hsl(245, 100%, 81%);
+}
+
+.button_animation::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  z-index: 2;
+}
+
+.button__text {
+  padding: 14px 30px;
+  font-family: "Inter", sans-serif;
+  color: hsl(0, 0%, 0%);
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.button__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 0 50%;
+}
+
+.button__color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-90deg, red, orange, yellow, green, blue, indigo, violet);
+}
+
+/* ------------------------ */
 .button {
   text-align: center;
   font-size: 1.125rem;
   font-weight: 700;
   line-height: normal;
-  padding: 0.625rem 2rem;
+  padding: 1.125rem 1.875rem;
   background-color: hsl(245, 100%, 81%);
-  border-radius: 1.5rem;
+  border-radius: 1.875rem;
   transition: background-color 0.3s ease;
 }
 
 .button:hover,
 .button:active {
-  background-color: hsl(215, 18%, 79%);
+  background-color: hsl(245, 100%, 89%);
 }
 
 .title {
@@ -278,8 +326,10 @@ body {
   background: url(/assets/icons/download.svg) right no-repeat;
 }
 
-.main__github-button span {
+.button__text span {
   padding-right: 34px;
+  line-height: 1.5;
+  text-align: center;
   display: inline-block;
   background: url(/assets/icons/mdi_github.svg) right no-repeat;
 }
