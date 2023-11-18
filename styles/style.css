@@ -400,7 +400,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
@@ -415,7 +415,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 7.625rem;
+  margin-bottom: 122px;
 }
 
 .main__title {
@@ -439,7 +439,7 @@ body {
 
 .main__buttons {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-direction: column;
   align-items: stretch;
   width: 100%;
@@ -667,8 +667,10 @@ textarea.form__input {
   [class*=__container] {
     max-width: 80%;
   }
-  /* ------------------------ */
   .button__text {
+    padding: 18px 30px;
+  }
+  .button {
     padding: 20px 30px;
   }
   .main__title {
@@ -679,6 +681,30 @@ textarea.form__input {
 @media (min-width: 991.9808px) {
   [class*=__container] {
     max-width: 90%;
+  }
+  .main__container {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 45px;
+  }
+  .main__content {
+    margin-bottom: 0;
+    flex: 2;
+  }
+  .main__buttons {
+    gap: 1.25rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  .main__title {
+    font-size: 98px;
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  .main__image {
+    padding-top: 0;
+    flex: 1;
   }
 }
 @media (min-width: 1280px) {
