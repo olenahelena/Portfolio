@@ -9,7 +9,6 @@
     justify-content: center;
     align-items: center;
     column-gap: 1.7rem;
-    // row-gap: 0.9375rem;
 }
 
 .menu-footer__item:hover {
@@ -64,6 +63,9 @@
     align-items: center;
     justify-content: center;
     width: 56px;
+    transition: background-color 0.3s ease;
 }
 
-.social__link_icon {}
+.social__link:hover {
+    background-color: $light-purple;
+}
