@@ -421,6 +421,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 122px;
+  flex: 0 1 50%;
 }
 
 .main__title {
@@ -464,14 +465,22 @@ body {
   background: url(/assets/icons/mdi_github.svg) right no-repeat;
 }
 
-.responsive-picture {
-  max-width: 100%;
-  height: auto;
+.main__decor {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main__image {
-  text-align: center;
-  padding-top: 38px;
+  max-width: 22.5rem;
+}
+
+.main__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* ------------------------ */
@@ -488,6 +497,10 @@ body {
 .about__text {
   line-height: 1.7;
   margin-bottom: 1.5rem;
+}
+
+.about__image img {
+  max-width: 328px;
 }
 
 /* ------------------------ */
@@ -664,7 +677,7 @@ textarea.form__input {
 /* ------------------------ */
 @media (min-width: 479.9808px) {
   [class*=__container] {
-    max-width: 70%;
+    max-width: 0%;
   }
   .main__content {
     display: flex;
@@ -672,10 +685,16 @@ textarea.form__input {
     align-items: center;
     margin-bottom: 7.625rem;
   }
+  .main__image {
+    max-width: 28rem;
+  }
+  .about__image img {
+    max-width: 28rem;
+  }
 }
 @media (min-width: 797.98px) {
   [class*=__container] {
-    max-width: 80%;
+    max-width: 70%;
   }
   .button__text {
     padding: 18px 30px;
@@ -686,6 +705,12 @@ textarea.form__input {
   .main__title {
     font-size: 3rem;
     margin-bottom: 3.375rem;
+  }
+  .main__image {
+    max-width: 35rem;
+  }
+  .about__image img {
+    max-width: 30rem;
   }
 }
 @media (min-width: 991.9808px) {
@@ -700,11 +725,11 @@ textarea.form__input {
     flex-direction: row;
     gap: 2rem;
     align-items: center;
-    margin-top: 45px;
+    margin-top: 100px;
   }
   .main__content {
     margin-bottom: 0;
-    flex: 2;
+    flex: 0 1 60%;
   }
   .main__buttons {
     gap: 1.25rem;
@@ -716,9 +741,11 @@ textarea.form__input {
     text-align: left;
     margin-bottom: 3rem;
   }
+  .main__decor {
+    flex: 0 1 40%;
+  }
   .main__image {
-    padding-top: 0;
-    flex: 1;
+    max-width: 27.5rem;
   }
   /* ------------------------ */
   .about {
@@ -733,8 +760,8 @@ textarea.form__input {
   .about__text {
     margin-bottom: 44px;
   }
-  .about__image picture {
-    width: 90%;
+  .about__image img {
+    max-width: 500px;
   }
   /* ------------------------ */
   .projects {
@@ -778,6 +805,9 @@ textarea.form__input {
   [class*=__container] {
     max-width: 1200px;
   }
+  .main__container {
+    gap: 5rem;
+  }
   .items-projects {
     gap: 40px;
   }
@@ -787,5 +817,14 @@ textarea.form__input {
   }
   .contacts__image img {
     width: 100%;
+  }
+  .main__image {
+    max-width: 42rem;
+  }
+  .about__container {
+    gap: 90px;
+  }
+  .about__image img {
+    max-width: 548px;
   }
 }/*# sourceMappingURL=style.css.map */
