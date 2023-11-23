@@ -182,7 +182,7 @@ body {
 }
 
 .main__image {
-    max-width: 22.5rem;
+    max-width: 20.625rem;
 }
 
 .main__image img {
@@ -392,7 +392,7 @@ textarea.form__input {
 
 @media (min-width: 479.9808px) {
     [class*="__container"] {
-        max-width: 0%;
+        max-width: 90%;
     }
 
     .main__content {
@@ -409,12 +409,17 @@ textarea.form__input {
     .about__image img {
         max-width: 28rem;
     }
+
+    .main__buttons {
+        width: 70%;
+    }
+
+    .contacts__container {
+        max-width: 460px;
+    }
 }
 
 @media (min-width: 797.98px) {
-    [class*="__container"] {
-        max-width: 70%;
-    }
 
     .button__text {
         padding: 18px 30px;
@@ -437,13 +442,26 @@ textarea.form__input {
         max-width: 30rem;
     }
 
-}
-
-@media (min-width: 991.9808px) {
-    [class*="__container"] {
-        max-width: 90%;
+    .about__text {
+        max-width: 620px;
+        margin-bottom: 2.75rem;
     }
 
+    .main__buttons {
+        width: 60%;
+    }
+
+    .items-projects__text p {
+        max-width: 620px;
+    }
+
+    .contacts__container {
+        max-width: 620px;
+    }
+}
+
+
+@media (min-width: 991.9808px) {
     .title {
         font-size: 3rem;
         margin-bottom: 3rem;
@@ -481,6 +499,10 @@ textarea.form__input {
         max-width: 27.5rem;
     }
 
+    .main__buttons {
+        width: 100%;
+    }
+
     /* ------------------------ */
 
     .about {
@@ -495,7 +517,7 @@ textarea.form__input {
     }
 
     .about__text {
-        margin-bottom: 44px;
+        margin-bottom: 0;
     }
 
     .about__image img {
@@ -550,6 +572,10 @@ textarea.form__input {
         width: 483px;
         padding: 60px 25px 52px;
     }
+
+    .contacts__container {
+        max-width: 900px;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -557,8 +583,12 @@ textarea.form__input {
         max-width: 1200px;
     }
 
+    .main__title {
+        font-size: 98px;
+    }
+
     .main__container {
-        gap: 5rem;
+        gap: 10rem;
     }
 
     .items-projects {
@@ -584,5 +614,9 @@ textarea.form__input {
 
     .about__image img {
         max-width: 548px;
+    }
+
+    .contacts__container {
+        max-width: 1200px;
     }
 }

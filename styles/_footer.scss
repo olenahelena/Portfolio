@@ -69,3 +69,14 @@
 .social__link:hover {
     background-color: $light-purple;
 }
+
+@media (min-width: 991.9808px) {
+
+    .menu-footer__list {
+        column-gap: 3.125rem;
+    }
+
+    .footer__social {
+        gap: 20px;
+    }
+}
