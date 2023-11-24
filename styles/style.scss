@@ -4,6 +4,7 @@
 @import "variables";
 @import "header";
 @import "footer";
+@import "form";
 
 /* ------------------------ */
 
@@ -291,81 +292,6 @@ body {
 
 /* ------------------------ */
 
-.contacts {
-    padding-bottom: 3rem;
-}
-
-.contacts__image {
-    display: none;
-}
-
-.form {
-    background: $purple;
-    padding: 3.5625rem 1.25rem 2.5625rem;
-    border-radius: 2.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form__label {
-    display: block;
-    margin-bottom: 0.625rem;
-    font-weight: 700;
-}
-
-.form__input {
-    font-family: 'Inter', sans-serif;
-    border-radius: 1rem;
-    background: $light-purple;
-    width: 100%;
-    height: 3.6875rem;
-    padding: 0 1.5rem;
-    color: $black;
-}
-
-textarea.form__input {
-    height: 5rem;
-    resize: vertical;
-    padding: 1.5rem;
-}
-
-.form__input:not(:last-child) {
-    margin-bottom: 1.5rem;
-}
-
-.form__input::placeholder {
-    color: $dark-grayish;
-    transition: opacity 0.3s ease 0s;
-}
-
-.form__input:focus-visible {
-    outline: none;
-}
-
-.form__input:focus::placeholder {
-    opacity: 0;
-}
-
-.form__button {
-    margin-top: 1.3125rem;
-    width: 100%;
-    background-color: $lime-green;
-    transition: all 0.3s ease;
-}
-
-.form__button:hover {
-    background-color: hsla(70, 100%, 80%, 0.9);
-}
-
-.form__button span {
-    padding-right: 2.125rem;
-    display: inline-block;
-    background: url(/assets/icons/send_icon.svg) right no-repeat;
-}
-
-/* ------------------------ */
-
 .error {
     display: none;
 }
@@ -394,10 +320,6 @@ textarea.form__input {
 
     .main__buttons {
         width: 70%;
-    }
-
-    .contacts__container {
-        max-width: 28.75rem;
     }
 
     .items-projects__text p {
@@ -441,13 +363,10 @@ textarea.form__input {
         max-width: 30rem;
     }
 
-    .contacts__container {
-        max-width: 38.75rem;
-    }
 }
 
 
-@media (min-width: 991.9808px) {
+@media (min-width: 991.98px) {
     .title {
         font-size: 3rem;
         margin-bottom: 3rem;
@@ -532,37 +451,6 @@ textarea.form__input {
         align-items: center;
         gap: 2.8125rem;
     }
-
-    /* ------------------------ */
-
-    .contacts {
-        padding-bottom: 5rem;
-    }
-
-    .contacts__content {
-        display: flex;
-        gap: 1.25rem;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-
-    .contacts__image {
-        display: inline-block;
-    }
-
-    .contacts__image img {
-        width: 90%;
-    }
-
-    .form {
-        width: 30.1875rem;
-        padding: 3.75rem 1.5625rem 3.25rem;
-    }
-
-    .contacts__container {
-        max-width: 56.25rem;
-    }
 }
 
 @media (min-width: 1280px) {
@@ -582,15 +470,6 @@ textarea.form__input {
         gap: 2.5rem;
     }
 
-    .form {
-        width: 30.1875rem;
-        padding: 4.1875rem 2.625rem 3.875rem;
-    }
-
-    .contacts__image img {
-        width: 100%;
-    }
-
     .main__image {
         max-width: 42rem;
     }
@@ -601,9 +480,5 @@ textarea.form__input {
 
     .about__image img {
         max-width: 34.25rem;
-    }
-
-    .contacts__container {
-        max-width: 75rem;
     }
 }
