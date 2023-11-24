@@ -28,9 +28,9 @@ body {
 }
 
 [class*="__container"] {
-    max-width: 340px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 21.25rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
     margin: 0 auto;
 }
 
@@ -40,13 +40,8 @@ body {
     overflow: hidden;
     border: 1px solid rgb(255, 255, 255, 0.1);
     border-radius: 30px;
-    // box-shadow: 0 0 15px rgb(0, 0, 0, 0.4);
     background: $purple;
 }
-
-// .button_animation:hover {
-//     box-shadow: 0 0 15px rgb(0, 0, 0, 0.4);
-// }
 
 .button_animation::before {
     position: absolute;
@@ -60,11 +55,11 @@ body {
 }
 
 .button__text {
-    padding: 14px 30px;
+    padding: 0.875rem 1.875rem;
     font-family: 'Inter', sans-serif;
     color: $black;
     font-size: 1.125rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-weight: 700;
     text-align: center;
     position: relative;
@@ -103,7 +98,6 @@ body {
 
 .button:hover,
 .button:active {
-    // background-color: $light-grayish-blue;
     background-color: hsla(245, 100%, 89%, 1);
 }
 
@@ -129,7 +123,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 122px;
+    margin-bottom: 7.625rem;
     flex: 0 1 50%;
 }
 
@@ -140,7 +134,7 @@ body {
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
-    margin-bottom: 2.75rem;
+    margin-bottom: 1.5rem;
 }
 
 .button_dark {
@@ -167,7 +161,7 @@ body {
 }
 
 .button__text span {
-    padding-right: 34px;
+    padding-right: 2.125rem;
     line-height: 1.5;
     text-align: center;
     display: inline-block;
@@ -194,7 +188,7 @@ body {
 /* ------------------------ */
 
 .about {
-    padding: 45px 0 52px 0;
+    padding: 2.8125rem 0 3.25rem 0;
 }
 
 .about__container {
@@ -209,16 +203,14 @@ body {
 }
 
 .about__image img {
-    max-width: 328px;
+    max-width: 20.5rem;
 }
 
 /* ------------------------ */
 
 .projects {
-    padding: 50px 0 54px 0;
+    padding: 3.125rem 0 3.375rem 0;
 }
-
-.projects__container {}
 
 .works__title:not(:last-child) {
     margin-bottom: 1.5rem;
@@ -233,13 +225,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 45px;
+    gap: 2.8125rem;
 }
 
-.items-works__item {}
-
 .items-projects__image img {
-    border-radius: 16px;
+    border-radius: 1rem;
 }
 
 .items-projects__image {
@@ -249,8 +239,8 @@ body {
 
 .items-projects__image:hover {
     transform: scale3d(1.1, 1.1, 1);
-    border-radius: 16px;
-    box-shadow: 0px 4px 16px 0px rgba(141, 142, 255, 0.6);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem 0 rgba(141, 142, 255, 0.6);
 }
 
 .items-projects__text {
@@ -260,7 +250,7 @@ body {
 .items-projects__title {
     margin-bottom: 1.5rem;
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -285,13 +275,13 @@ body {
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    margin-bottom: 42px;
+    margin-bottom: 2.625rem;
 }
 
 .items-projects__button span {
-    height: 24px;
-    width: 24px;
-    padding-right: 34px;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding-right: 2.125rem;
     background: url(/assets/icons/arrow_icon.svg) right no-repeat;
 }
 
@@ -305,31 +295,23 @@ body {
     padding-bottom: 3rem;
 }
 
-.contacts__container {}
-
-.contacts__content {}
-
-
 .contacts__image {
     display: none;
 }
 
 .form {
     background: $purple;
-    padding: 57px 20px 41px;
-    border-radius: 36px;
+    padding: 3.5625rem 1.25rem 2.5625rem;
+    border-radius: 2.25rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.form__item {}
-
 .form__label {
     display: block;
     margin-bottom: 0.625rem;
     font-weight: 700;
-    // color: $dark-grayish;
 }
 
 .form__input {
@@ -366,7 +348,7 @@ textarea.form__input {
 }
 
 .form__button {
-    margin-top: 21px;
+    margin-top: 1.3125rem;
     width: 100%;
     background-color: $lime-green;
     transition: all 0.3s ease;
@@ -377,7 +359,7 @@ textarea.form__input {
 }
 
 .form__button span {
-    padding-right: 34px;
+    padding-right: 2.125rem;
     display: inline-block;
     background: url(/assets/icons/send_icon.svg) right no-repeat;
 }
@@ -415,18 +397,22 @@ textarea.form__input {
     }
 
     .contacts__container {
-        max-width: 460px;
+        max-width: 28.75rem;
+    }
+
+    .items-projects__text p {
+        max-width: 26.25rem;
     }
 }
 
 @media (min-width: 797.98px) {
 
     .button__text {
-        padding: 18px 30px;
+        padding: 1.125rem 1.875rem;
     }
 
     .button {
-        padding: 20px 30px;
+        padding: 1.25rem 1.875rem;
     }
 
     .main__title {
@@ -443,7 +429,7 @@ textarea.form__input {
     }
 
     .about__text {
-        max-width: 620px;
+        max-width: 38.75rem;
         margin-bottom: 2.75rem;
     }
 
@@ -452,11 +438,11 @@ textarea.form__input {
     }
 
     .items-projects__text p {
-        max-width: 620px;
+        max-width: 30rem;
     }
 
     .contacts__container {
-        max-width: 620px;
+        max-width: 38.75rem;
     }
 }
 
@@ -471,12 +457,13 @@ textarea.form__input {
         flex-direction: row;
         gap: 2rem;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 6.25rem;
     }
 
     .main__content {
         margin-bottom: 0;
         flex: 0 1 60%;
+        min-width: 27.5rem;
     }
 
     .main__buttons {
@@ -486,7 +473,7 @@ textarea.form__input {
     }
 
     .main__title {
-        font-size: 98px;
+        font-size: 5rem;
         text-align: left;
         margin-bottom: 3rem;
     }
@@ -506,14 +493,14 @@ textarea.form__input {
     /* ------------------------ */
 
     .about {
-        padding: 145px 0 72px 0;
+        padding: 9.0625rem 0 4.5rem 0;
     }
 
     .about__container {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        gap: 40px;
+        gap: 2.5rem;
     }
 
     .about__text {
@@ -521,18 +508,18 @@ textarea.form__input {
     }
 
     .about__image img {
-        max-width: 500px;
+        max-width: 31.25rem;
     }
 
     /* ------------------------ */
 
     .projects {
-        padding: 70px 0 60px 0;
+        padding: 4.375rem 0 3.75rem 0;
     }
 
     .items-projects {
         flex-direction: row;
-        gap: 10px;
+        gap: 0.625rem;
     }
 
     .works__title:not(:last-child) {
@@ -543,7 +530,7 @@ textarea.form__input {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 45px;
+        gap: 2.8125rem;
     }
 
     /* ------------------------ */
@@ -554,7 +541,7 @@ textarea.form__input {
 
     .contacts__content {
         display: flex;
-        gap: 20px;
+        gap: 1.25rem;
         align-items: center;
         justify-content: space-between;
     }
@@ -569,22 +556,22 @@ textarea.form__input {
     }
 
     .form {
-        width: 483px;
-        padding: 60px 25px 52px;
+        width: 30.1875rem;
+        padding: 3.75rem 1.5625rem 3.25rem;
     }
 
     .contacts__container {
-        max-width: 900px;
+        max-width: 56.25rem;
     }
 }
 
 @media (min-width: 1280px) {
     [class*="__container"] {
-        max-width: 1200px;
+        max-width: 75rem;
     }
 
     .main__title {
-        font-size: 98px;
+        font-size: 6.125rem;
     }
 
     .main__container {
@@ -592,12 +579,12 @@ textarea.form__input {
     }
 
     .items-projects {
-        gap: 40px;
+        gap: 2.5rem;
     }
 
     .form {
-        width: 483px;
-        padding: 67px 42px 62px;
+        width: 30.1875rem;
+        padding: 4.1875rem 2.625rem 3.875rem;
     }
 
     .contacts__image img {
@@ -609,14 +596,14 @@ textarea.form__input {
     }
 
     .about__container {
-        gap: 90px;
+        gap: 5.625rem;
     }
 
     .about__image img {
-        max-width: 548px;
+        max-width: 34.25rem;
     }
 
     .contacts__container {
-        max-width: 1200px;
+        max-width: 75rem;
     }
 }

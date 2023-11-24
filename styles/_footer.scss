@@ -1,5 +1,5 @@
 .footer {
-    padding: 32px 0 30px 0;
+    padding: 2rem 0 1.875rem 0;
     background-color: $footer_bg;
 }
 
@@ -17,11 +17,11 @@
 
 .menu-footer__link {
     line-height: 1.5rem;
-    padding-left: 26px;
+    padding-left: 1.625rem;
 }
 
 .menu-footer {
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem;
 }
 
 .menu-footer__link_home {
@@ -38,31 +38,31 @@
 
 .footer_content {
     display: flex;
-    gap: 100px;
+    gap: 6.25rem;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .footer__logo {
-    width: 84px;
-    height: 34px;
+    width: 5.25rem;
+    height: 2.125rem;
 }
 
 .footer__social {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .social__link {
-    height: 56px;
-    padding: 8px;
+    height: 3.5rem;
+    padding: 0.5rem;
     background: $purple;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 56px;
+    width: 3.5rem;
     transition: background-color 0.3s ease;
 }
 
@@ -77,6 +77,6 @@
     }
 
     .footer__social {
-        gap: 20px;
+        gap: 1.25rem;
     }
 }

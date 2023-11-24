@@ -54,7 +54,7 @@ function windowLoad() {
 }
 
 
-// Header
+// On scroll
 
 document.addEventListener("click", documentActions);
 
@@ -63,28 +63,26 @@ function documentActions(e) {
 
    if (targetElement.closest('.icon-menu')) {
        document.documentElement.classList.toggle('menu-open');
-    }
+   }
 
    if (targetElement.closest('[data-goto]')) {
-    document.documentElement.classList.contains('menu-open') ?
-        document.documentElement.classList.remove('menu-open') : null;
+       document.documentElement.classList.remove('menu-open');
 
        const goTo = targetElement.closest('[data-goto]').dataset.goto;
        const goToElement = document.querySelector(goTo);
        const headerHeight = document.querySelector('.header').offsetHeight;
 
        if (goToElement) {
-        window.scrollTo({
-            top: goToElement.offsetTop - (headerHeight + 15),
-            behavior: "smooth"
-        });
+           window.scrollTo({
+               top: goToElement.offsetTop - headerHeight,
+               behavior: "smooth"
+           });
+           e.preventDefault();
        }
-       e.preventDefault();
    }
 }
+
 
 // Download CV
 
 // Form
-
-// Footer
