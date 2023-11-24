@@ -1,5 +1,8 @@
 <?php
-   use PHPMailer\PHPMailer\PHPMailer;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Your form processing code here
+     use PHPMailer\PHPMailer\PHPMailer;
    use PHPMailer\PHPMailer\SMTP;
    use PHPMailer\PHPMailer\Exception; 
 
@@ -16,8 +19,8 @@
    $mail->Host = 'smtp.gmail.com';
    // set the SMTP server to send through
    $mail->SMTPAuth = true;
-   $mail->Username = 'lemonslice67@gmail.com';
-   $mail->Password = 'tjrvxsldsxwtkmcs';
+   $mail->Username = '';
+   $mail->Password = '';
    $mail->Port = '587';
    $mail->SMTPSecure = 'TLS';
 
@@ -59,4 +62,9 @@
    $mail->send();
    $mail->smtpClose();
 
+} else {
+    http_response_code(405); // Method Not Allowed
+    exit("Method Not Allowed");
+}
+  
 ?>
