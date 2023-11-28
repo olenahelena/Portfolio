@@ -182,8 +182,8 @@
 
             <section class="page__form contacts-form">
                 <form method="POST" action="sendMail/sendmail.php" enctype="multipart/form-data" class="form">
-                    <input type="text" placeholder="Name" name="name" class="form__input">
-                    <input type="email" placeholder="Email" name="email" class="form__input">
+                    <input required type="text" placeholder="Name" name="name" class="form__input">
+                    <input required type="email" placeholder="Email" name="email" class="form__input">
                     <div class="form__options options-form">
                         <h4 class="options-form__title">Do you like Code Only?</h4>
                         <label class="options-form__item">
@@ -192,7 +192,7 @@
                         </label>
                         <label class="options-form__item">
                             <input type="radio" name="like" value="No!" class="options-form__input">
-                            <span class="options-form__text">No!</span>
+                            <span class="options-form__text">No! thanks</span>
                         </label>
                     </div>
 
@@ -205,7 +205,7 @@
                         <div class="file-form__name"></div>
                     </div>
                     <label class="form__checkbox checkbox-form">
-                        <input type="checkbox" name="thebest" class="checkbox-form__input">
+                        <input required type="checkbox" name="thebest" class="checkbox-form__input">
                         <span class="checkbox-form__text">Code Only the best channel in the world!</span>
                     </label>
                     <button class="form__button buttond">Send</button>

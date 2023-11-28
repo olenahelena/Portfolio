@@ -1,32 +1,29 @@
 <?php
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Your form processing code here
-     use PHPMailer\PHPMailer\PHPMailer;
+   use PHPMailer\PHPMailer\PHPMailer;
    use PHPMailer\PHPMailer\SMTP;
    use PHPMailer\PHPMailer\Exception; 
 
-   require 'phpmailer/src/Exception.php';
-   require 'phpmailer/src/PHPMailer.php';
-   require 'phpmailer/src/SMTP.php';
+   require 'PHPMailer/src/Exception.php';
+   require 'PHPMailer/src/PHPMailer.php';
+   require 'PHPMailer/src/SMTP.php';
 
    $mail = new PHPMailer(true);
    $mail->CharSet = 'UTF-8';
-   $mail->setLanguage('en', 'phpmailer/language');
+   $mail->setLanguage('en', 'PHPMailer/language');
    $mail->IsHTML(true);
 
    $mail->IsSMTP(); 
    $mail->Host = 'smtp.gmail.com';
    // set the SMTP server to send through
    $mail->SMTPAuth = true;
-   $mail->Username = '';
-   $mail->Password = '';
+   $mail->Username = 'olena.codes@gmail.com';
+   $mail->Password = 'nnzjufelxmgmploc';
    $mail->Port = '587';
    $mail->SMTPSecure = 'TLS';
 
-   $mail->setFrom('lemonslice67@gmail.com', 'Olena Shevchenko');
-   $mail->addAddress('');
-   $mail->Subject = 'E-mail from Code Only';
+   $mail->setFrom('olena.codes@gmail.com', 'Olena');
+   $mail->addAddress('lemonslice67@gmail.com');
+   $mail->Subject = 'E-mail from Olena';
 
    // Body
 
@@ -61,10 +58,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
    // Sending
    $mail->send();
    $mail->smtpClose();
-
-} else {
-    http_response_code(405); // Method Not Allowed
-    exit("Method Not Allowed");
-}
-  
 ?>
