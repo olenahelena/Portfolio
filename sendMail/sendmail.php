@@ -1,15 +1,15 @@
 <?php
    use PHPMailer\PHPMailer\PHPMailer;
    use PHPMailer\PHPMailer\SMTP;
-   use PHPMailer\PHPMailer\Exception; 
+   use PHPMailer\PHPMailer\Exception;
 
-   require 'PHPMailer/src/Exception.php';
-   require 'PHPMailer/src/PHPMailer.php';
-   require 'PHPMailer/src/SMTP.php';
+   require 'phpailer/src/Exception.php';
+   require 'phpailer/src/PHPMailer.php';
+   require 'phpailer/src/SMTP.php';
 
    $mail = new PHPMailer(true);
    $mail->CharSet = 'UTF-8';
-   $mail->setLanguage('en', 'PHPMailer/language');
+   $mail->setLanguage('en', 'phpailer/language');
    $mail->IsHTML(true);
 
    $mail->IsSMTP(); 
@@ -37,20 +37,6 @@
    }
    if(trim(!empty($_POST['message']))) {
       $body .= "<p>Message: <strong>".$_POST['message']."</strong></p>";
-   }
-   if(trim(!empty($_POST['like']))) {
-      $body .= "<p>Do you like Code Only? <strong>".$_POST['like']."</strong></p>";
-   }
-   if(trim(!empty($_POST['thebest']))) {
-      $body .= "<strong>what?</strong>";
-   }
-
-   // add file
-
-   if(trim(!empty($_FILES['image']['tmp_name']))) {
-      $fileTmpName = $_FILES['image']['tmp_name'];
-      $fileName = $_FILES['image']['name'];
-      $mail->addAttachment($fileTmpName, $fileName);
    }
 
    $mail->Body = $body;

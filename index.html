@@ -180,37 +180,21 @@
                 </div>
             </section> -->
 
-            <section class="page__form contacts-form">
-                <form method="POST" action="sendMail/sendmail.php" enctype="multipart/form-data" class="form">
-                    <input required type="text" placeholder="Name" name="name" class="form__input">
-                    <input required type="email" placeholder="Email" name="email" class="form__input">
-                    <div class="form__options options-form">
-                        <h4 class="options-form__title">Do you like Code Only?</h4>
-                        <label class="options-form__item">
-                            <input type="radio" name="like" value="Yes!" class="options-form__input">
-                            <span class="options-form__text">Yes!</span>
-                        </label>
-                        <label class="options-form__item">
-                            <input type="radio" name="like" value="No!" class="options-form__input">
-                            <span class="options-form__text">No! thanks</span>
-                        </label>
+            <section class="page__form contacts-form contacts">
+                <div class="contacts__container">
+                    <h2 class="contacts__title title">Contact</h2>
+                    <div class="contacts__content">
+                        <div class="contacts__image">
+                            <img src="/assets/images/message_img.png" alt="Girl Image">
+                        </div>
+                        <form method="POST" action="sendmail/sendmail.php" enctype="multipart/form-data" class="form">
+                            <input required type="text" placeholder="Name" name="name" class="form__input">
+                            <input required type="email" placeholder="Email" name="email" class="form__input">
+                            <textarea name="message" placeholder="Message" class="form__input"></textarea>
+                            <button class="form__button buttond"><span>Send</span></button>
+                        </form>
                     </div>
-
-                    <textarea name="message" placeholder="Message" class="form__input"></textarea>
-                    <div class="form__file file-form">
-                        <label class="file-form__item">
-                            <input type="file" name="image" accept=".jpg, .png" class="file-form__input">
-                            <div class="file-form__button buttond">Choose file</div>
-                        </label>
-                        <div class="file-form__name"></div>
-                    </div>
-                    <label class="form__checkbox checkbox-form">
-                        <input required type="checkbox" name="thebest" class="checkbox-form__input">
-                        <span class="checkbox-form__text">Code Only the best channel in the world!</span>
-                    </label>
-                    <button class="form__button buttond">Send</button>
-                </form>
-
+                </div>
             </section>
 
         </main>
