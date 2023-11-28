@@ -89,19 +89,9 @@ function documentActions(e) {
 const forms = document.forms;
 if (forms.length) {
     for (const form of forms) {
-    const file = form.querySelector('input[type="file"]');
-    file ? file.addEventListener('change', formAddFile) : null;
-    form.addEventListener('submit', formSubmitAction);
+        form.addEventListener('submit', formSubmitAction);
     }
 }
-
-function formAddFile(e) {
-    const formInputFile = e.target;
-    const formFiles = formInputFile.files;
-    const fileName = formFiles.length ? formFiles[0].name : '';
-    formInputFile.parentElement.nextElementSibling.innerHTML = fileName;
-}
-
 async function formSubmitAction(e) {
     e.preventDefault();
     const form = e.target;
@@ -111,16 +101,13 @@ async function formSubmitAction(e) {
 
     form.classList.add('form-sending');
 
-    const response = await fetch(formAction, {
+    const response = fetch(formAction, {
         method: formMethod,
         body: formData
     })
     if (response.ok) {
         alert('Form sent!');
         form.classList.remove('form-sending');
-
-        const formInputFile = form.querySelector('input[type="file"]');
-        formInputFile ? formInputFile.parentElement.nextElementSibling.innerHTML = '' : null;
         form.reset();
     } else {
         alert('Error');

@@ -1,47 +1,51 @@
 <?php
-   use PHPMailer\PHPMailer\PHPMailer;
-   use PHPMailer\PHPMailer\SMTP;
-   use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-   require 'phpailer/src/Exception.php';
-   require 'phpailer/src/PHPMailer.php';
-   require 'phpailer/src/SMTP.php';
+require '/phpailer/src/Exception.php';
+require '/phpailer/src/PHPMailer.php';
+require '/phpailer/src/SMTP.php';
 
-   $mail = new PHPMailer(true);
-   $mail->CharSet = 'UTF-8';
-   $mail->setLanguage('en', 'phpailer/language');
-   $mail->IsHTML(true);
+$response = ['success' => false, 'error' => ''];
 
-   $mail->IsSMTP(); 
-   $mail->Host = 'smtp.gmail.com';
-   // set the SMTP server to send through
-   $mail->SMTPAuth = true;
-   $mail->Username = 'olena.codes@gmail.com';
-   $mail->Password = 'nnzjufelxmgmploc';
-   $mail->Port = '587';
-   $mail->SMTPSecure = 'TLS';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-   $mail->setFrom('olena.codes@gmail.com', 'Olena');
-   $mail->addAddress('lemonslice67@gmail.com');
-   $mail->Subject = 'E-mail from Olena';
+    $mail = new PHPMailer(true);
+    
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'olena.codes@gmail.com';
+        $mail->Password = 'nnzjufelxmgmploc';
+        $mail->Port = 587;
+        $mail->SMTPSecure = 'tls';
 
-   // Body
+        $mail->setFrom('olena.codes@gmail.com', 'Your Name');
+        $mail->addAddress($email, $name);
 
-   $body = '<h1>Hi! It is Code Only!</h1>';
+        $mail->isHTML(true);
+        $mail->Subject = 'Subject of the Email';
+        $mail->Body = $message;
 
-   if(trim(!empty($_POST['name']))) {
-      $body .= "<p>Name: <strong>".$_POST['name']."</strong></p>";
-   }
-   if(trim(!empty($_POST['email']))) {
-      $body .= "<p>Email: <strong>".$_POST['email']."</strong></p>";
-   }
-   if(trim(!empty($_POST['message']))) {
-      $body .= "<p>Message: <strong>".$_POST['message']."</strong></p>";
-   }
+        $mail->send();
 
-   $mail->Body = $body;
+        $response['success'] = true;
+    } catch (Exception $e) {
+        $response['error'] = $mail->ErrorInfo;
+    }
+} else {
+    http_response_code(405); // Method Not Allowed
+    $response['error'] = 'Method Not Allowed';
+}
 
-   // Sending
-   $mail->send();
-   $mail->smtpClose();
+header('Content-Type: application/json');
+echo json_encode($response);
+
+error_log('Script is executing.');  // Add this line at various points in your script
+
 ?>

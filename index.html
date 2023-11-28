@@ -148,38 +148,6 @@
                 </div>
             </section>
 
-            <!-- <section class="page__contacts contacts">
-                <div class="contacts__container">
-                    <h2 class="contacts__title title">Contact</h2>
-                    <div class="contacts__content">
-
-                        <div class="contacts__image">
-                            <img src="/assets/images/message_img.png" alt="Girl Image">
-                        </div>
-                        <form action="" class="contacts__form form">
-                            <div class="form__item">
-                                <label for="i-1" class="form__label">Your name</label>
-                                <input required id="i-1" type="text" placeholder="Name" class="form__input" name="name">
-                            </div>
-                            <div class="form__item">
-                                <label for="i-2" class="form__label">Your email</label>
-                                <input required id="i-2" type="text" placeholder="Email" class="form__input"
-                                    name="email">
-                            </div>
-                            <div class="form__item">
-                                <label for="i-3" class="form__label">Your Message</label>
-                                <textarea name="" id="i-3" class="form__input" placeholder="Message"
-                                    name="message"></textarea>
-                            </div>
-                            <div class="form__item">
-                                <button type="submit" class="form__button button"><span>Send Message</span></button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </section> -->
-
             <section class="page__form contacts-form contacts">
                 <div class="contacts__container">
                     <h2 class="contacts__title title">Contact</h2>
@@ -187,12 +155,16 @@
                         <div class="contacts__image">
                             <img src="/assets/images/message_img.png" alt="Girl Image">
                         </div>
-                        <form method="POST" action="sendmail/sendmail.php" enctype="multipart/form-data" class="form">
-                            <input required type="text" placeholder="Name" name="name" class="form__input">
-                            <input required type="email" placeholder="Email" name="email" class="form__input">
-                            <textarea name="message" placeholder="Message" class="form__input"></textarea>
-                            <button class="form__button buttond"><span>Send</span></button>
+
+                        <form method="POST" action="/sendmail/sendmail.php" enctype="multipart/form-data" class="form"
+                            id="emailForm">
+                            <input required type="text" placeholder="Name" name="name" class="form__input" id="name">
+                            <input required type="email" placeholder="Email" name="email" class="form__input"
+                                id="email">
+                            <textarea name="message" placeholder="Message" class="form__input" id="message"></textarea>
+                            <button class="form__button buttond" type="submit"><span>Send</span></button>
                         </form>
+
                     </div>
                 </div>
             </section>
