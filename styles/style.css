@@ -678,10 +678,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.8125rem;
+  gap: 1.5rem;
 }
 
 .items-projects__image img {
+  width: 14.8125rem;
+  height: 14.8125rem;
   border-radius: 1rem;
 }
 
@@ -866,6 +868,9 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2.8125rem;
+  }
+  .items-projects__text {
+    height: 242px;
   }
 }
 @media (min-width: 1280px) {
