@@ -84,6 +84,29 @@ function documentActions(e) {
 
 // Download CV
 
+ document.getElementById('cv__button').addEventListener('click', function() {
+      // Assuming 'your_pdf.pdf' is the name of your PDF file
+      const pdfUrl = 'assets/pdf/cv.pdf';
+
+      // Create an anchor element
+      const link = document.createElement('a');
+
+      // Set the href attribute to the PDF file's URL
+      link.href = pdfUrl;
+
+      // Set the download attribute to prompt the user for download
+      link.download = 'cv.pdf';
+
+      // Append the link to the body
+      document.body.appendChild(link);
+
+      // Trigger the click event on the link
+      link.click();
+
+      // Remove the link from the DOM
+      document.body.removeChild(link);
+    });
+
 // Form
 
 // const forms = document.forms;
