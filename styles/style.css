@@ -75,7 +75,7 @@ span {
   z-index: 50;
 }
 
-/* .header::before {
+.header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -85,7 +85,7 @@ span {
   z-index: 2;
   background-color: hsl(206, 20%, 93%);
   border-bottom: 1px solid hsl(215, 18%, 79%);
-} */
+}
 
 .header__container {
   display: flex;
