@@ -39,8 +39,8 @@ body {
 .button_animation {
     position: relative;
     overflow: hidden;
-    border: 1px solid rgb(255, 255, 255, 0.1);
-    border-radius: 30px;
+    border: 0.0625rem solid rgb(255, 255, 255, 0.1);
+    border-radius: 1.875rem;
     background: $purple;
 }
 
@@ -51,7 +51,7 @@ body {
     top: 0;
     left: 0;
     content: "";
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(1.5625rem);
     z-index: 2;
 }
 
@@ -301,7 +301,7 @@ body {
 
 /* ------------------------ */
 
-@media (min-width: 479.9808px) {
+@media (min-width: 29.9988em) {
     [class*="__container"] {
         max-width: 90%;
     }
@@ -330,7 +330,7 @@ body {
     }
 }
 
-@media (min-width: 797.98px) {
+@media (min-width: 49.8738em) {
 
     .button__text {
         padding: 1.125rem 1.875rem;
@@ -368,17 +368,17 @@ body {
 
     .items-projects {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         grid-gap: 2rem;
         width: 100%;
-        max-width: 1280px;
+        max-width: 80rem;
         justify-items: center;
     }
 
 }
 
 
-@media (min-width: 991.98px) {
+@media (min-width: 61.9988em) {
     .title {
         font-size: 3rem;
         margin-bottom: 3rem;
@@ -466,11 +466,11 @@ body {
     }
 
     .items-projects__text {
-        height: 205px;
+        height: 12.8125rem;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80em) {
     [class*="__container"] {
         max-width: 75rem;
     }
