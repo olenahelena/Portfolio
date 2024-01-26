@@ -86,7 +86,7 @@ function documentActions(e) {
 
  document.getElementById('cv__button').addEventListener('click', function() {
       // Assuming 'your_pdf.pdf' is the name of your PDF file
-      const pdfUrl = 'assets/pdf/cv.pdf';
+      const pdfUrl = 'assets/pdf/Shevchenko CV.pdf';
 
       // Create an anchor element
       const link = document.createElement('a');
@@ -95,7 +95,7 @@ function documentActions(e) {
       link.href = pdfUrl;
 
       // Set the download attribute to prompt the user for download
-      link.download = 'cv.pdf';
+      link.download = 'Shevchenko CV.pdf';
 
       // Append the link to the body
       document.body.appendChild(link);
