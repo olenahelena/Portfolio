@@ -86,7 +86,7 @@ function documentActions(e) {
 
  document.getElementById('cv__button').addEventListener('click', function() {
       // Assuming 'your_pdf.pdf' is the name of your PDF file
-      const pdfUrl = 'assets/pdf/Shevchenko CV.pdf';
+      const pdfUrl = 'assets/pdf/Shevchenko cv.pdf';
 
       // Create an anchor element
       const link = document.createElement('a');
